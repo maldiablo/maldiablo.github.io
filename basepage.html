@@ -4,45 +4,65 @@ p.heading {
 	color: white;
 	font-family: arial;
 	font-size: 40;
+	user-select: none;
 }
 
 p.white {
 	color: white;
 	font-family: arial;
+	user-select: none;
 }
 p.red {
 	background-color: red;
 	color: white;
 	font-family: arial;
+	user-select: none;
 }
 
 p.yellow {
 	background-color: yellow;
 	color: black;
 	font-family: arial;
+	user-select: none;
 }
 
 p.green {
 	background-color: green;
 	color: white;
 	font-family: arial;
+	user-select: none;
 }
 
 p.blue {
 	background-color: blue;
 	color: white;
 	font-family: arial;
+	user-select: none;
 }
 
+
+*.unselectable {
+   -moz-user-select: none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+
+   /*
+     Introduced in IE 10.
+     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+   */
+   -ms-user-select: none;
+   user-select: none;
+}
+	
 </style>
 </head>
 
 <html>
-<body bgcolor="#0">
-<table border="0" cellspacing="0" cellpadding="0">
+<body bgcolor="#0" class="unselectable">
+<table border="0" cellspacing="0" cellpadding="0" class="unselectable">
 <tr>
 <td>
-<img src="ov_computer_withbg.jpeg" alt="" usemap="#Map" />
+<img src="ov_computer_withbg.jpeg" alt="" usemap="#Map" class="unselectable" />
 <map name="Map" id="Map">
     <area alt="" title="" href="http://localhost:7860/?button=0" target="statusframe" shape="rect" coords="327,201,374,250" />
     <area alt="" title="" href="http://localhost:7860/?button=1" target="statusframe" shape="poly" coords="395,210,394,265,450,265" />
